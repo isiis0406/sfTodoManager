@@ -1,0 +1,15 @@
+<template>
+    <lightning-card title="Liste des Contacts">
+        <lightning-datatable
+            key-field="Id"
+            data={contacts}
+            show-row-number-column=""
+            columns={columns}
+            draft-values={draftValues}
+            hide-checkbox-column="true"
+            data-id="my-datatable"
+            >
+        </lightning-datatable>
+    </lightning-card>
+</template>
+

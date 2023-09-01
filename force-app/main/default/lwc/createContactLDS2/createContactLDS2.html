@@ -1,0 +1,66 @@
+<template>
+    <lightning-card title="Contact Manager">
+        <lightning-layout>
+            <lightning-layout-item size="6" padding="around-small">
+                <lightning-card title="Create new Contact">
+                    <lightning-input name="Contact Name" label="Name" onchange={contactNameChangeHandler}></lightning-input>
+                    <lightning-input name="Contact Email" label="Email" onchange={contactEmailChangeHandler}></lightning-input>
+                    <lightning-input name="Contact Phone" label="Phone" onchange={contactPhoneChangeHandler}></lightning-input>
+                    <lightning-button label="Create Contact" onclick={createContact}></lightning-button>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/EjrcldPveDA?si=7r4dbkynMOKC2sU4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> 
+                    <lightning-carousel>
+                    
+                        <lightning-carousel-image
+                            src="https://images.unsplash.com/photo-1555371363-27a37f8e8c46?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80" alt="Image 1"
+                            header = "First Card"
+                            description = "First card description."
+                            alternative-text = "First card accessible description."
+                            href = "https://developer.salesforce.com/docs/component-library/bundle/lightning-carousel/example"
+                            target="__blanck"
+                            >
+                        
+                        </lightning-carousel-image>
+                        <lightning-carousel-image
+                            src="https://images.unsplash.com/photo-1556761175-b413da4baf72?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2274&q=80" alt="Image 2"
+                            header = "Second Card"
+                            description = "Second card description."
+                            alternative-text = "Second card accessible description."
+                            href = "https://images.unsplash.com/photo-1555421689-d68471e189f2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80"
+                            target="__blanck"
+                            >
+                        
+                        </lightning-carousel-image>
+                        <lightning-carousel-image
+                            src="https://images.unsplash.com/photo-1555421689-d68471e189f2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80" alt="Image 3"
+                            header = "Third Card"
+                            description = "Third card description."
+                            alternative-text = "Third card accessible description."
+                            href = "javascript:void(0);"
+                            >
+                        
+                        </lightning-carousel-image>
+                    </lightning-carousel>   
+                </lightning-card>
+            </lightning-layout-item>
+            <lightning-layout-item size="6" padding="around-small">
+                <lightning-card title="View Contact Record">
+                    <p><lightning-formatted-text value={retContactName}></lightning-formatted-text></p>
+                    <p><lightning-formatted-email value={retContactEmail}></lightning-formatted-email></p>
+                    <p><lightning-formatted-phone value={retContactPhone}></lightning-formatted-phone></p>
+                     <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2274&q=80" alt="Salesforce image"> -->
+                    <lightning-map
+                        map-markers={markers}
+                        zoom-level="10"
+                        markers-title="My Map"
+                    ></lightning-map> 
+                   <lightning-breadcrumbs>
+                    <lightning-breadcrumb label="etape 1"></lightning-breadcrumb>
+                    <lightning-breadcrumb label="etape 2"></lightning-breadcrumb>
+                    <lightning-breadcrumb label="etape 3"></lightning-breadcrumb>
+                   </lightning-breadcrumbs> 
+                              
+            </lightning-card>
+            </lightning-layout-item>
+        </lightning-layout>
+    </lightning-card>
+</template>
